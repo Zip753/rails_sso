@@ -7,6 +7,7 @@ module RailsSso
     attr_accessor :provider_name
     attr_accessor :provider_key
     attr_accessor :provider_secret
+    attr_accessor :provider_extra_args
 
     attr_accessor :provider_profile_path
     attr_accessor :provider_sign_out_path
@@ -27,6 +28,7 @@ module RailsSso
       self.profile_mocks = {}
       self.access_token_mock = nil
       self.failure_app = RailsSso::FailureApp
+      self.provider_extra_args = []
     end
 
     def provider_callback_path

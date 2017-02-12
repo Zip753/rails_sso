@@ -46,6 +46,7 @@ module RailsSso
           provider RailsSso.config.provider_name,
             RailsSso.config.provider_key,
             RailsSso.config.provider_secret,
+            *(RailsSso.config.provider_extra_args || []),
             callback_path: RailsSso.config.provider_callback_path
         end
 
